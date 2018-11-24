@@ -82,7 +82,7 @@ public class Main {
 
     public static void main(String args[]) {
 
-        //int[] a = readArray();
+        // int[] a = readArray();
 
         int[] a = readArrayFromFile("resources/array.txt");
 
