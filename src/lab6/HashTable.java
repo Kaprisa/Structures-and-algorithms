@@ -77,7 +77,7 @@ public class HashTable<T> {
         return this.indexOf(value) != -1;
     }
 
-    List<T> search(String prefix) {
+    public List<T> search(String prefix) {
         int key = this.getKey(prefix);
         List<T> result = new ArrayList<>();
         for (int i = key * this.step; i < key * this.step + this.offsets[key]; i ++) {

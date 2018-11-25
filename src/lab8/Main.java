@@ -19,13 +19,20 @@ public class Main {
         Student student = new Student("Иван", "Иванов", "13.03.1998", "89042343434", progress);
         studentsStore.addStudent(student);
 
+
+        System.out.println("\nИщем студентов на \"В\"\n");
+        System.out.println(studentsStore.getStudents().search("в"));
+
         // Удаляем одного из студентов
         Student studentToDelete = studentsStore.get("васильева наталья");
-        System.out.println("Удаляем студента " + studentToDelete.getName());
+        System.out.println("\nУдаляем студента " + studentToDelete.getName());
         studentsStore.deleteStudent(studentToDelete);
 
         // Записываем студентов в файл
         studentsStore.writeToFile("resources/students1.txt");
+
+        System.out.println("\nИщем студентов на \"В\"\n");
+        System.out.println(studentsStore.getStudents().search("в"));
 
 
     }

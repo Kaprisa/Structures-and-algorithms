@@ -57,4 +57,8 @@ class StudentsStore {
     public String toString() {
         return students.toList().stream().map(Student::toFullString).reduce("", (acc, s) -> acc + s + "\n");
     }
+
+    public HashTable<Student> getStudents() {
+        return students;
+    }
 }
