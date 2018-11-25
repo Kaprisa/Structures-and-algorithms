@@ -24,6 +24,12 @@ public class Person implements Comparable<Person> {
         this.phone = phone;
     }
 
+    public Person(String firstName, String lastName, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+    }
+
     public Person(int ID, String firstName, String lastName) {
         this.ID = ID;
         this.firstName = firstName;
@@ -40,7 +46,7 @@ public class Person implements Comparable<Person> {
         return this.ID - o.ID;
     }
 
-    public void setID(int ID) {
+    void setID(int ID) {
         this.ID = ID;
     }
 
@@ -64,19 +70,21 @@ public class Person implements Comparable<Person> {
         return ID;
     }
 
-    public String getFirstName() {
+    protected String getFirstName() {
         return firstName;
     }
 
-    public String getLastName() {
+    protected String getLastName() {
         return lastName;
     }
 
-    public String getPostalAdress() {
+    public String getName() { return  getLastName() + " " + getFirstName(); }
+
+    protected String getPostalAdress() {
         return postalAdress;
     }
 
-    public String getPhone() {
+    protected String getPhone() {
         return phone;
     }
 

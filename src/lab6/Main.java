@@ -2,7 +2,7 @@ package lab6;
 
 public class Main {
     public static void main(String[] args) {
-        HashTable table = new HashTable();
+        HashTable table = new HashTable<String>(String.class);
 
         table.add("собака");
         table.add("кот");
